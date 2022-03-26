@@ -88,7 +88,7 @@ class Book(models.Model):
     cover_img_url = models.ImageField(upload_to=cover_upload_to, height_field=None, width_field=None, max_length=None)
     book_url = models.FileField(upload_to=book_upload_to, max_length=100)
     price = models.DecimalField(max_digits=5, decimal_places=2)
-    discount_price = models.DecimalField(max_digits=5, decimal_places=2)
+    discount_price = models.DecimalField(max_digits=5, decimal_places=2, default=0)
     is_available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
